@@ -10,7 +10,15 @@ public class Course {
 		
 		ArrayList<Student> students = new ArrayList();
 		
+		//CONSTRUCTOR
+		public Course(String courseName, String professorName, int year) {
+	        this.courseName = courseName;
+	        this.professorName = professorName;
+	        this.year = year;
+	    }
+		
 		//MÉTODOS
+		
 		public void enroll(Student student){//Enrola a estudiante si no exite, sino manda que ya exite
 			students.add(student);
 		}//enroll

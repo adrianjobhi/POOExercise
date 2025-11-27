@@ -1,6 +1,7 @@
   
 
 public class Student {
+	   //Se agregan los atributos de Student
        String firstName;
        String lastName;
        int registration;
