@@ -38,12 +38,11 @@ public class Student {
        }//Constructor
        
        public Student (String firstName, String lastName) {//Construye Student desde el "firstName" y "lastName"
-    	   this.firstName = firstName;
-    	   this.lastName = lastName;
+    	   this (firstName, lastName, 802940, 75, 5);
        }//Constructor
        
-       public Student (int registration) { //Construye Student desde el "registration"
-    	   this.registration = registration;
+       public Student () { //Construye Student desde 0
+    	   this ("Job", "Hernández", 130898, 100, 5);
        }//Constructor
        
        
