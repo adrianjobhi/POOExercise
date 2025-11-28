@@ -36,7 +36,7 @@ public class Course {
 		   return students.size();
 	   }//countStudents
 		   
-	   public int bestGrade(){ //Regresa el valor mayor "grade" usando iterator
+	   public int bestGrade(){ //Regresa el valor mayor "bestGrade" usando iterator
 		   Iterator<Student> iterator = students.iterator();
 		   int bestGrade = 0;
 		   while(iterator.hasNext()) {
@@ -48,6 +48,17 @@ public class Course {
 		   }
 		   
 		   return bestGrade;
+	   }//bestGrade
+	   
+	   public double averageGrade(){ //Regresa el valor mayor "averageGrade" usando iterator
+		   Iterator<Student> iterator = students.iterator();
+		   double averageGrade = 0;
+		   while(iterator.hasNext()) {
+			   Student grade = iterator.next();
+			   averageGrade += grade.grade;
+		   }
+		   averageGrade = averageGrade/students.size();
+		   return averageGrade;
 	   }//bestGrade
 	   
 	   //Overload enroll. Enrola todo un arrayList de "students" (estudiantes)

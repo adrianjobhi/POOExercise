@@ -9,11 +9,11 @@ public class Student {
        int year;
        
        //MÉTODOS
-       public void printFullName(){ //Muestra el nombre completo
+       public void printFullName(){ //Muestra el nombre completo del "student" (estudiante)
     	   System.out.println(firstName + " " + lastName);
        }//printFullName
 
-       public boolean isApproved(){ //Regresa "true" si el "grade" (calificación) es igual o mayor que 60, sino regresa "False"
+       public boolean isApproved(){ //Regresa "true" si el "grade" (calificación) es igual o mayor que 60, sino regresa "false"
     	   if (grade >= 60) {
     		   return true;
     	   }else {
@@ -21,7 +21,7 @@ public class Student {
     	   }
        }//isApproved
 
-       public int changeYearIfApproved(){// Si el "grade" (calificación) es igual o mayor que 60 aumenta "year" + 1 e imprime "Congratulations"
+       public int changeYearIfApproved(){// Si el "grade" (calificación) es igual o mayor que 60 aumenta "year" + 1 e imprime "¡Congratulations!" y el nombre completo del student
     	   if (grade >= 60) {
     		   year += 1;
     		   System.out.println("¡Congratulations! " + firstName + " " + lastName);

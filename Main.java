@@ -14,7 +14,7 @@ public class Main {
 		Student[]  studentsArray = {
 				new Student("Gabriel", "Castillo", 270269, 95, 2),
 				new Student("Lorena", "Ramos", 270273, 80, 4),
-				new Student("Luis", "Torres", 131518, 50, 5)
+				new Student("Luis", "Torres", 131518, 59, 5)
 		};
 		
 		//Enrola "students" (estudiantes) usando el método "enroll" de la clase "Course"
@@ -49,6 +49,9 @@ public class Main {
 		System.out.println("Is student 3 approved?: " + student3.isApproved());
 		System.out.println("Year of student 3 before change: " + student3.year);
 		System.out.println("Actual year of student 3: " + student3.changeYearIfApproved());
+		
+		//Muestra el promedio de "grade" de los "students" (estudiantes" del "course" (curso) usando el método "averageGrade" de la clase "Course"
+		System.out.println("The average grade is: " + course.averageGrade());
 		
 	}
 
