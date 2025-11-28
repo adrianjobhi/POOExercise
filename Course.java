@@ -50,7 +50,7 @@ public class Course {
 		   return bestGrade;
 	   }//bestGrade
 	   
-	   public double averageGrade(){ //Regresa el valor mayor "averageGrade" usando iterator
+	   public double averageGrade(){ //Regresa el valor mayor "averageGrade" (promedio de calificación) usando iterator 
 		   Iterator<Student> iterator = students.iterator();
 		   double averageGrade = 0;
 		   while(iterator.hasNext()) {
@@ -60,6 +60,31 @@ public class Course {
 		   averageGrade = averageGrade/students.size();
 		   return averageGrade;
 	   }//bestGrade
+	   
+	   public void rankingStudent() { //Regresa el ranking de "student" (estudiantes) del curso con sus respectivos "grade" (califiación)
+		  
+	   }
+	   
+	   public void printaAboveInOrBelowAverage() { //Muestra si el "student" (estudiante) esta dentro del promedio de "grade" (calificación) o no
+			double average = averageGrade();
+			Iterator<Student> iterator = students.iterator();
+			
+			while(iterator.hasNext()) {
+				   Student actualStudent = iterator.next();
+				   String state;
+				   
+				   if(actualStudent.grade > average) {
+					   state = "---> Above average";
+				   }else if(actualStudent.grade == average) {
+					   state = "---> Average";
+				   }else {
+					   state = "---> Below average";
+				   }
+				   
+				   System.out.println("|  " + actualStudent.firstName + " " + actualStudent.lastName + " " + state);
+			   }
+	   }
+	   
 	   
 	   //Overload enroll. Enrola todo un arrayList de "students" (estudiantes)
 	   public void enroll(Student[] studentsArray) {

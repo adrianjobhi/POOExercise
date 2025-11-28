@@ -26,33 +26,40 @@ public class Main {
 		course.enroll(studentsArray);
 		
 		//Muestra el total de "students" (estudiantes) enrolados en el curso con el método "countStudents" de la clase "Course"
-		System.out.println("Total students unrolled: "+ course.countStudents());
+		System.out.println("|  Total students enrolled: "+ course.countStudents());
+		System.out.println("===========================================");
 		
 		//Muesta el mayor "grade" (calificación) del "course" (curso) usando el método "bestGrade" de la clase "Course"
-		System.out.println("Best grade: " + course.bestGrade());
+		System.out.println("|  Best grade: " + course.bestGrade());
+		System.out.println("===========================================");
 		
 		//Desenrola al "student2" usando el método "unEnrroll" de la clase "Course" y muestra el total de students
 		course.unEnroll(student2);
-		System.out.println("Total students unrolled: "+ course.countStudents());
+		System.out.println("|  Total students enrolled: "+ course.countStudents());
+		System.out.println("===========================================");
 
 		//Muestra el nombre completo de "student1" usando el método "printFullName" de la clase "Student"
-		System.out.println("Full name student 1: ");
+		System.out.println("|  Full name student 1: ");
 		student1.printFullName();
+		System.out.println("===========================================");
 		
 		//Promueve a "student1" al siguiente año usando el método "isApproved" para verificar si paso y lo promueve usando el método "changeYearIfApproved" ambas de la clase "Student"
-		System.out.println("Is student 1 approved?: " + student1.isApproved());
-		System.out.println("Year of student 1 before change: " + student1.year);
-		System.out.println("Actual year of student 1: " + student1.changeYearIfApproved());
-		
+		System.out.println("|  Is student 1 approved?: " + student1.isApproved());
+		System.out.println("|  Year of student 1 before change: " + student1.year);
+		System.out.println("|  Actual year of student 1: " + student1.changeYearIfApproved());
+		System.out.println("===========================================");
 
 		//No se promueve a "stundent3" al siguiente año	...
-		System.out.println("Is student 3 approved?: " + student3.isApproved());
-		System.out.println("Year of student 3 before change: " + student3.year);
-		System.out.println("Actual year of student 3: " + student3.changeYearIfApproved());
+		System.out.println("|  Is student 3 approved?: " + student3.isApproved());
+		System.out.println("|  Year of student 3 before change: " + student3.year);
+		System.out.println("|  Actual year of student 3: " + student3.changeYearIfApproved());
+		System.out.println("===========================================");
 		
 		//Muestra el promedio de "grade" de los "students" (estudiantes" del "course" (curso) usando el método "averageGrade" de la clase "Course"
-		System.out.println("The average grade is: " + course.averageGrade());
+		System.out.println("|  The average grade is: " + course.averageGrade());
 		
+		//Muestra a todos los "student" y si estan arriba, en o debajo del promedio utilizando el método "printaAboveInOrBelowAverage"
+		course.printaAboveInOrBelowAverage();
 	}
 
 }
