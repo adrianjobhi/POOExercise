@@ -44,6 +44,7 @@ public class Main {
 		System.out.println("Year of student 1 before change: " + student1.year);
 		System.out.println("Actual year of student 1: " + student1.changeYearIfApproved());
 		
+
 		//No se promueve a "stundent3" al siguiente año	...
 		System.out.println("Is student 3 approved?: " + student3.isApproved());
 		System.out.println("Year of student 3 before change: " + student3.year);
