@@ -24,7 +24,7 @@ public class Student {
        public int changeYearIfApproved(){// Si el "grade" (calificación) es igual o mayor que 60 aumenta "year" + 1 e imprime "Congratulations"
     	   if (grade >= 60) {
     		   year += 1;
-    		   System.out.println("Congratulation");
+    		   System.out.println("¡Congratulations! " + firstName + " " + lastName);
     	   }
     	   return year;
        }//changeYearIfApproved
@@ -44,7 +44,6 @@ public class Student {
        
        public Student () { //Construye Student desde 0
     	   this ("Job", "Hernández", 130898, 100, 5);
-       }//Constructor
-       
+       }//Constructor       
        
    }//class Student

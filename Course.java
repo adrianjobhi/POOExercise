@@ -7,7 +7,7 @@ public class Course {
 		String courseName;
 		String professorName;
 		int year;
-		
+
 		ArrayList<Student> students = new ArrayList();
 		
 		//CONSTRUCTOR
@@ -19,11 +19,11 @@ public class Course {
 		
 		//MÉTODOS
 		
-		public void enroll(Student student){//Enrola a estudiante si no exite, sino manda que ya exite
+		public void enroll(Student student){//Enrola a "student" (estudiante) si no exite, sino manda que ya exite
 			students.add(student);
 		}//enroll
 
-		public void unEnroll(Student student){ //Desenrola a estudiante si exite, sino manda que no lo encuentra
+		public void unEnroll(Student student){ //Desenrola a "student" (estudiante) si exite, sino manda que no lo encuentra
 			if(students.contains(student)) {
 				students.remove(student);
 			}else {
@@ -32,11 +32,11 @@ public class Course {
 		       
 		}//unEnroll
 
-	   public int countStudents(){ //Regresa el numero de estudiantes que existen
+	   public int countStudents(){ //Regresa el numero de "student" (estudiantes) que existen
 		   return students.size();
 	   }//countStudents
 		   
-	   public int bestGrade(){
+	   public int bestGrade(){ //Regresa el valor mayor "grade" usando iterator
 		   Iterator<Student> iterator = students.iterator();
 		   int bestGrade = 0;
 		   while(iterator.hasNext()) {
@@ -48,6 +48,15 @@ public class Course {
 		   }
 		   
 		   return bestGrade;
-	   }
+	   }//bestGrade
+	   
+	   //Overload enroll. Enrola todo un arrayList de "students" (estudiantes)
+	   public void enroll(Student[] studentsArray) {
+		   for(Student s : studentsArray) {
+			   students.add(s);
+		   }
+	   }//overload enroll
+	   
+	   
 		
 }
