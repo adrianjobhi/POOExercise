@@ -24,7 +24,7 @@ public class Course {
 		}//enroll
 
 		public void unEnroll(Student student){ //Desenrola a "student" (estudiante) si exite, sino manda que no lo encuentra
-			if(students.contains(student)) {
+			if(students.contains(student) && (students != null)) {
 				students.remove(student);
 			}else {
 				System.out.println("Student not found");
@@ -89,7 +89,7 @@ public class Course {
 	   //Overload enroll. Enrola todo un arrayList de "students" (estudiantes)
 	   public void enroll(Student[] studentsArray) {
 		   for(Student s : studentsArray) {
-			   students.add(s);
+			   this.enroll(s);;
 		   }
 	   }//overload enroll
 	   
